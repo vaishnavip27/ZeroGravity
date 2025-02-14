@@ -11,7 +11,7 @@ const Header = () => {
         <div className="absolute -left-16 -top-16 w-44 h-44 bg-gradient-to-b from-[#f86300] to-[#ffa32b] opacity-50 rounded-full"></div>
 
         {/* Background Element 2 */}
-        <div className="absolute mr-2 right-0 -top-20 w-20 h-64 rounded-l-sm bg-gradient-to-t from-[#DB6100] to-[#F83400] opacity-40 rounded-full"></div>
+        <div className="absolute mr-2 right-0 -top-20 w-20 h-64 rounded-l-sm bg-gradient-to-b from-[#f86300] to-[#ffa32b]  opacity-40 rounded-full"></div>
       </div>
 
       <motion.div
