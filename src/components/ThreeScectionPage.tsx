@@ -3,10 +3,18 @@
 import Spline from "@splinetool/react-spline";
 import Header from "./header";
 import { motion } from "framer-motion";
+import MyMarquee from "./marquee";
+import { useState, useEffect } from "react";
 
 const ThreeSectionPage = () => {
+  const [showSpline, setShowSpline] = useState(false);
+
+  useEffect(() => {
+    setShowSpline(true); // Load Spline only on the client
+  }, []);
+
   return (
-    <main className="w-full h-screen snap-y snap-mandatory overflow-y-scroll bg-black">
+    <main className="w-full h-screen snap-y snap-mandatory overflow-x-hidden overflow-y-scroll bg-[#100c08]">
       {/* Section 1 with Spline */}
       <section className="h-screen relative snap-proximity">
         {/* Place Header above Spline */}
@@ -27,21 +35,21 @@ const ThreeSectionPage = () => {
         </div>
 
         {/* Spline Scene */}
-        <Spline
-          scene="https://prod.spline.design/aDNta5nbpYMXrOQI/scene.splinecode"
-          className="absolute inset-0 w-full h-full z-10"
-        />
+        {showSpline && (
+          <Spline
+            scene="https://prod.spline.design/aDNta5nbpYMXrOQI/scene.splinecode"
+            className="absolute inset-0 w-full h-full z-10"
+          />
+        )}
       </section>
 
       {/* Section 2 */}
-      <section className="h-screen flex items-center justify-center bg-gradient-to-r from-green-500 to-teal-500 text-white">
-        <h1 className="text-4xl font-semibold text-center">
-          Explore Stunning 3D Visuals
-        </h1>
+      <section className="h-[150vh] flex flex-col justify-center items-center text-white bg-[#100c08]">
+        <MyMarquee />
       </section>
 
       {/* Section 3 */}
-      <section className="h-screen flex items-center justify-center bg-gradient-to-r from-orange-500 to-red-500 text-white">
+      <section className="relative h-screen flex items-center justify-center text-white bg-[#100c08]">
         <h1 className="text-4xl font-semibold text-center">
           Start Your Journey Today
         </h1>

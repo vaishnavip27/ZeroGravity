@@ -4,14 +4,14 @@ import { motion } from "framer-motion";
 
 const Header = () => {
   return (
-    <div className="relative px-5 py-4 text-slate-500">
+    <div className="relative px-9 py-4 text-slate-500">
       {/* Decorative Layer for Menu */}
       <div className="absolute top-0 left-0 w-full h-full -z-10">
         {/* Background Element 1 */}
-        <div className="absolute -left-16 -top-16 w-40 h-40 bg-gradient-to-b from-[#f86300] to-[#ffa32b] opacity-50 rounded-full"></div>
+        <div className="absolute -left-16 -top-16 w-44 h-44 bg-gradient-to-b from-[#f86300] to-[#ffa32b] opacity-50 rounded-full"></div>
 
         {/* Background Element 2 */}
-        <div className="absolute right-0 -top-20 w-20 h-64 rounded-r-sm bg-gradient-to-t from-[#DB6100] to-[#F83400] opacity-40 rounded-full"></div>
+        <div className="absolute mr-2 right-0 -top-20 w-20 h-64 rounded-l-sm bg-gradient-to-t from-[#DB6100] to-[#F83400] opacity-40 rounded-full"></div>
       </div>
 
       <motion.div
@@ -24,9 +24,9 @@ const Header = () => {
           <CgMenuGridO size={25} />
         </div>
         <div className="hidden md:flex gap-8">
-          <button>EXPLORE</button>
-          <button>MARKETPLACE</button>
-          <button>RESOURCES</button>
+          <button>HOME</button>
+          <button>ABOUT</button>
+          <button>CONTACT</button>
           <button>FAQ</button>
         </div>
         <div className="my-auto">
