@@ -6,19 +6,29 @@ import { motion } from "framer-motion";
 import MyMarquee from "./marquee";
 import { useState, useEffect } from "react";
 
-const generateStars = (count: number) =>
-  Array.from({ length: count }, (_, i) => ({
-    id: i,
-    x: Math.random() * 100 - 50, // Random X position
-    y: Math.random() * 90 - 40, // Random Y position
-  }));
+// Type for a star object
+interface Star {
+  id: number;
+  x: number;
+  y: number;
+}
 
-const ThreeSectionPage = () => {
-  const [showSpline, setShowSpline] = useState(false);
-  const stars = generateStars(80); // Adjust the count of stars
+// Helper function to generate stars
+const generateStars = (count: number): Star[] => {
+  return Array.from({ length: count }, (_, i) => ({
+    id: i,
+    x: Math.random() * 100 - 50,
+    y: Math.random() * 90 - 40,
+  }));
+};
+
+const ThreeSectionPage: React.FC = () => {
+  const [showSpline, setShowSpline] = useState<boolean>(false); 
+  const [stars, setStars] = useState<Star[]>([]); 
 
   useEffect(() => {
-    setShowSpline(true);
+    setShowSpline(true); 
+    setStars(generateStars(80)); 
   }, []);
 
   return (
@@ -50,7 +60,7 @@ const ThreeSectionPage = () => {
       </section>
 
       {/* Section 2 */}
-      <section className="h-[150vh] text-white bg-[#100c08] relative overflow-hidden border border-white">
+      <section className="h-[150vh] text-white bg-[#100c08] relative overflow-hidden ">
         <MyMarquee />
 
         {/* Animated Stars */}
