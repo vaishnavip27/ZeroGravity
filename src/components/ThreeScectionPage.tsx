@@ -42,7 +42,7 @@ const ThreeSectionPage: React.FC = () => {
 
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-[5]">
           <motion.h1
-            className="bg-gradient-to-b from-slate-200 to-slate-800 bg-clip-text text-transparent text-7xl md:text-6xl ultra-bold lg:text-9xl font-[900] text-center [text-shadow:_1px_1px_0_rgb(0_0_0_/_20%)]"
+            className="bg-gradient-to-b from-slate-200 to-slate-700 bg-clip-text text-transparent text-7xl md:text-6xl ultra-bold lg:text-9xl font-[900] text-center [text-shadow:_1px_1px_0_rgb(0_0_0_/_20%)]"
             initial={{ y: -100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 1, ease: "easeOut" }}
@@ -66,31 +66,30 @@ const ThreeSectionPage: React.FC = () => {
 
         <motion.div
           className="absolute top-1/3 left-20 transform -translate-y-1/2 cursor-pointer"
-          initial={{ x: "-100%" }} // Start completely outside the viewport
-          whileInView={{ x: "0%" }} // Slide into the viewport when in view
+          initial={{ x: "-100%" }}
+          whileInView={{ x: "0%" }}
           transition={{
             duration: 1.5,
             ease: "easeOut",
-            delay: 0.09, // Delay for this text
+            delay: 0.09,
           }}
-          viewport={{ once: true }} // Trigger animation only once
+          viewport={{ once: true }}
         >
           <h1 className="text-4xl md:text-5xl lg:text-8xl font-black bg-gradient-to-r from-gray-300 to-gray-800 bg-clip-text text-transparent group-hover:text-transparent group-hover:-webkit-text-stroke-[1px] group-hover:-webkit-text-stroke-gray-300">
             EQUILIBRIUM
           </h1>
         </motion.div>
 
-        {/* Sliding Text: "Explore the universe" */}
         <motion.div
           className="absolute top-[42%] left-20 transform -translate-y-1/2 mt-4 cursor-pointer"
-          initial={{ x: "-100%" }} // Start completely outside the viewport
-          whileInView={{ x: "0%" }} // Slide into the viewport when in view
+          initial={{ x: "-100%" }}
+          whileInView={{ x: "0%" }}
           transition={{
             duration: 0.6,
             ease: "easeOut",
-            delay: 0.6, // Delay for this text (slightly later)
+            delay: 0.6,
           }}
-          viewport={{ once: true }} // Trigger animation only once
+          viewport={{ once: true }}
         >
           <h1 className="text-4xl md:text-5xl lg:text-8xl font-black bg-gradient-to-r from-gray-300 to-gray-800 bg-clip-text text-transparent group-hover:text-transparent group-hover:-webkit-text-stroke-[1px] group-hover:-webkit-text-stroke-gray-300">
             MOMENTUM
@@ -99,24 +98,23 @@ const ThreeSectionPage: React.FC = () => {
 
         <motion.div
           className="absolute top-[52%] left-20 transform -translate-y-1/2 mt-4 cursor-pointer"
-          initial={{ x: "-100%" }} // Start completely outside the viewport
-          whileInView={{ x: "0%" }} // Slide into the viewport when in view
+          initial={{ x: "-100%" }}
+          whileInView={{ x: "0%" }}
           transition={{
             duration: 1.3,
             ease: "easeOut",
-            delay: 1.1, // Delay for this text (slightly later)
+            delay: 1.1,
           }}
-          viewport={{ once: true }} // Trigger animation only once
+          viewport={{ once: true }}
         >
           <h1 className="text-4xl md:text-5xl lg:text-8xl font-black bg-gradient-to-r from-gray-300 via-[#FA3200] to-gray-800 bg-clip-text text-transparent group-hover:text-transparent group-hover:-webkit-text-stroke-[1px] group-hover:-webkit-text-stroke-gray-300">
             INERTIA
           </h1>
         </motion.div>
 
-        {/* Stars */}
         <div className="absolute top-1/2 mt-20 right-[-60px] transform -translate-y-1/2 pointer-events-none">
           <Image
-            src="/flower.jpg" // Replace with the actual path to your image
+            src="/flower.jpg"
             alt="Cat Image"
             className="w-[540px] h-auto"
             width={300}
@@ -131,7 +129,6 @@ const ThreeSectionPage: React.FC = () => {
           Start Your Journey Today
         </h1>
 
-        {/* Animated Stars */}
         <div className="absolute top-3/4 bottom-0 left-1/2 transform -translate-x-1/2 w-2/3 h-1/2 pointer-events-none">
           {stars.map((star) => (
             <motion.div

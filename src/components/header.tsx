@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const Header = () => {
   return (
-    <div className="relative px-9 py-4 text-slate-500">
+    <div className="relative px-9 py-4 text-slate-400 font-medium">
       {/* Decorative Layer for Menu */}
       <div className="absolute top-0 left-0 w-full h-full -z-10">
         {/* Background Element 1 */}
