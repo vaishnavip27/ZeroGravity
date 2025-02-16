@@ -1,4 +1,3 @@
-import { IoMenu } from "react-icons/io5";
 import { CgMenuGridO } from "react-icons/cg";
 import { motion } from "framer-motion";
 
@@ -23,14 +22,13 @@ const Header = () => {
         <div className="my-auto">
           <CgMenuGridO size={25} />
         </div>
-        <div className="hidden md:flex gap-8">
+        <div className="hidden md:flex gap-8 pl-24">
           <button>HOME</button>
           <button>ABOUT</button>
           <button>CONTACT</button>
-          <button>FAQ</button>
         </div>
         <div className="my-auto">
-          <IoMenu size={25} />
+          <div className="py-3 px-10 bg-gradient-to-b from-[#ffaf00] to-[#E74E00] text-slate-200 cursor-pointer rounded-lg">Sign up</div>
         </div>
       </motion.div>
     </div>
