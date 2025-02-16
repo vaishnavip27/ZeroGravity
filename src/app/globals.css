@@ -53,8 +53,7 @@ body {
 
 /* Add this CSS */
 html {
-  overflow: scroll;
-  overflow-x: hidden;
+  overflow: hidden;
   scrollbar-width: none;
 }
 ::-webkit-scrollbar {
